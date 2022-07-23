@@ -4,18 +4,18 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <map>
-#include "FoodLogger.h"
+#include <fstream>
 #include "UserPrompts.h"
+#include "FoodTracker.h"
 
 
 std::string NewOrReturningUser(){
     bool prompt = false;
-    std::string answer = "";
+    std::string answer;
     std::cout <<"Hello! Welcome to your food tracking portal!" <<std::endl;
     std::cout<< "Are you a new or returning user?" << std::endl;
-    while(prompt == false){
-        std::cout << "Respond yes or no: " << std::endl;
+    while(!prompt){
+        std::cout << "Respond yes or no:" << std::endl;
         std::cin >> answer;
         prompt = validAnswer(answer);
     }
@@ -32,14 +32,14 @@ bool validAnswer(std::string answer){
     return false;
 }
 
-void nextMove(int userInput, FoodLogger person){
+void nextMove(int userInput){
     bool end = false;
     while(!end){
         if(userInput == 1){
-            person.FoodLogger::makeNewEntry();
+            makeNewEntry();
         }
         else if(userInput == 2){
-            person.FoodLogger::viewExistingEntry();
+            viewExistingEntry();
         } else if(userInput == 3){
             end = true;
         } else {

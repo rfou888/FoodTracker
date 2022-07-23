@@ -1,15 +1,14 @@
 # ninja log v5
-3	65	1658525232404462335	build.ninja	4ecc4e196cb76dc8
-0	607	1658525233016216168	CMakeFiles/FoodTracker.dir/main.cpp.o	eb2ef8abff0557ab
-12	4038	1658602256351724683	CMakeFiles/FoodTracker.dir/main.cpp.o	eb2ef8abff0557ab
-14	4039	1658602256354447176	CMakeFiles/FoodTracker.dir/UserPrompts.cpp.o	bea8be9fab3127f8
-14	4140	1658602256455433090	CMakeFiles/FoodTracker.dir/FoodLogger.cpp.o	f44d288e90cdd131
-3	571	1658602344249717795	CMakeFiles/FoodTracker.dir/main.cpp.o	eb2ef8abff0557ab
-3	767	1658602344443754601	CMakeFiles/FoodTracker.dir/FoodLogger.cpp.o	f44d288e90cdd131
-4	672	1658602823040252573	CMakeFiles/FoodTracker.dir/main.cpp.o	eb2ef8abff0557ab
-5	675	1658602823044006121	CMakeFiles/FoodTracker.dir/UserPrompts.cpp.o	bea8be9fab3127f8
-5	751	1658602823120395513	CMakeFiles/FoodTracker.dir/FoodLogger.cpp.o	f44d288e90cdd131
+4	573	1658603758460585964	CMakeFiles/FoodTracker.dir/FoodLogger.cpp.o	f44d288e90cdd131
+4	556	1658603758444248790	CMakeFiles/FoodTracker.dir/UserPrompts.cpp.o	bea8be9fab3127f8
 5	1299	1658602934106174778	CMakeFiles/FoodTracker.dir/main.cpp.o	eb2ef8abff0557ab
-6	1343	1658602934150933803	CMakeFiles/FoodTracker.dir/UserPrompts.cpp.o	bea8be9fab3127f8
-6	1466	1658602934267573119	CMakeFiles/FoodTracker.dir/FoodLogger.cpp.o	f44d288e90cdd131
-9	581	1658603025844914646	CMakeFiles/FoodTracker.dir/FoodLogger.cpp.o	f44d288e90cdd131
+3	65	1658605885686938148	build.ninja	4ecc4e196cb76dc8
+0	83	1658605885686938148	build.ninja	4ecc4e196cb76dc8
+3	762	1658605886455664165	CMakeFiles/FoodTracker.dir/main.cpp.o	eb2ef8abff0557ab
+3	928	1658605886620035864	CMakeFiles/FoodTracker.dir/UserPrompts.cpp.o	bea8be9fab3127f8
+3	984	1658605886676941222	CMakeFiles/FoodTracker.dir/FoodTracker.cpp.o	91094024fe718ce8
+984	1079	1658605886777048518	FoodTracker	27782323a3925090
+3	603	1658605926265185818	CMakeFiles/FoodTracker.dir/UserPrompts.cpp.o	bea8be9fab3127f8
+603	658	1658605926322400344	FoodTracker	27782323a3925090
+4	491	1658605945929399036	CMakeFiles/FoodTracker.dir/main.cpp.o	eb2ef8abff0557ab
+491	545	1658605945985199811	FoodTracker	27782323a3925090

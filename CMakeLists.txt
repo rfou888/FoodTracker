@@ -3,4 +3,4 @@ project(FoodTracker)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(FoodTracker main.cpp FoodLogger.cpp FoodLogger.h UserPrompts.cpp UserPrompts.h)
+add_executable(FoodTracker main.cpp UserPrompts.cpp UserPrompts.h FoodTracker.cpp FoodTracker.h)

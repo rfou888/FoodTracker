@@ -6,7 +6,7 @@
 #define FOODTRACKER_USERPROMPTS_H
 std::string NewOrReturningUser();
 bool validAnswer(std::string answer);
-void nextMove(int userInput, FoodLogger person);
+void nextMove(int userInput);
 
 
 #endif //FOODTRACKER_USERPROMPTS_H

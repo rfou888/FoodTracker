@@ -1,30 +1,54 @@
 //
-// Created by Ryan Fouzdar on 7/22/22.
+// Created by Ryan Fouzdar on 7/23/22.
 //
 #include <iostream>
 #include <string>
 #include <vector>
 #include <fstream>
-#include "FoodLogger.h"
-FoodLogger::FoodLogger(){
+#include "FoodTracker.h"
+
+std::string name;
+
+void createNewUser(){
+    int age = 0;
+    double weight;
+    int height;
+    std::fstream userInfo;
     std::cout <<"What is your first and last name? Enter it with a space between the first and last name." << std::endl;
     std::getline(std::cin, name);
     userInfo.open(name.c_str());
     userInfo << "Name: " << name << std::endl;
-    validAge();
+    validAge(age);
     userInfo << "Age: " << age << std::endl;
-    validWeight();
+    validWeight(weight);
     userInfo << "Weight: " << weight << std::endl;
-    validHeight();
+    validHeight(height);
     userInfo << "Height: " << height << std::endl;
     userInfo.close();
 }
-void FoodLogger::makeNewEntry(){
-    userInfo.open(name.c_str(), std::fstream::app|std::ios::in);
+void makeNewEntry(){
+    std::fstream userInfo;
+    std::string date;
+    std::string meal;
+    double calories;
+    std::string main_meal;
+    userInfo.open(name.c_str(), std::fstream::app);
     std::string answer;
     userInfo << "------------------------------------------------" << std::endl;
     std::cout << "Enter the date of the entry." << std::endl;
     std::cin >> date;
+    userInfo << "Date: " << date << std::endl;
+    userInfo.close();
+    validResponse(meal, calories, main_meal);
+    userInfo.open(name.c_str(), std::fstream::app);
+    userInfo << "------------------------------------------------" << std::endl;
+    userInfo.close();
+}
+void validResponse(std::string& meal, double &calories, std::string& main_meal){
+    bool answerValid = false;
+    std::fstream userInfo;
+    userInfo.open(name.c_str(), std::fstream::app);
+    std::string answer;
     std::cout << "What meal did you eat?" << std::endl;
     std::cin >> meal;
     userInfo << "Meal Eaten: " << meal << std::endl;
@@ -34,18 +58,8 @@ void FoodLogger::makeNewEntry(){
     std::cout << "Which meal of the day was it? (Breakfast, Lunch Dinner) " << std::endl;
     std::cin >> main_meal;
     userInfo << "Meal of the Day: " << main_meal << std::endl;
-    validResponse();
-    userInfo << "------------------------------------------------" << std::endl;
-    userInfo.close();
-}
-void FoodLogger::validResponse(){
-    bool answerValid = false;
-    std::string answer;
     while(!answerValid){
-        std::cout << "Do you have more meals to enter in?";
-        std::cout << "Enter yes or no." << std::endl;
-        std::cin >> answer;
-        for(int i = 0; i < answer.length(); i++){
+        for(int i = 0; i < answer.length();i++){
             std::tolower(answer[i]);
         }
         if(answer == "yes"){
@@ -60,10 +74,15 @@ void FoodLogger::validResponse(){
             userInfo << "Meal of the Day: " << main_meal << std::endl;
         } else if(answer == "no") {
             answerValid = true;
+            userInfo.close();
+        } else{
+            std::cout << "Please enter yes or no." << std::endl;
+            std::cin >> answer;
         }
     }
+
 }
-void FoodLogger::validHeight(){
+void validHeight(int& height){
     bool heightValid = false;
     std::cout << "What is your height in inches?";
     std::cout << "Enter a number between 48 and 96. " << std::endl;
@@ -78,7 +97,7 @@ void FoodLogger::validHeight(){
     }
 }
 
-void FoodLogger::validAge(){
+void validAge(int& age){
     bool ageValid = false;
     std::cout<< "What is your age? ";
     std::cout <<  "Enter a number from 10 to a 100." << std::endl;
@@ -92,7 +111,7 @@ void FoodLogger::validAge(){
         }
     }
 }
-void FoodLogger::validWeight(){
+void validWeight(double& weight){
     bool weightValid = false;
     std::cout << "What is your weight?";
     std::cout <<  "Enter a number from 75lbs to 500lbs." << std::endl;
@@ -107,7 +126,8 @@ void FoodLogger::validWeight(){
     }
 }
 
-void FoodLogger::viewExistingEntry() {
+void viewExistingEntry() {
+    std::fstream userInfo;
     userInfo.open(name.c_str(),std::ios::in|std::ios::out);
     std::string date1;
     std::string line;
@@ -129,10 +149,6 @@ void FoodLogger::viewExistingEntry() {
 
 }
 
-void FoodLogger::setUserInfo(std::string textFile) {
+void setUserInfo(std::string textFile) {
     name = textFile;
-    userInfo.open(name.c_str(), std::ios::in|std::ios::out);
 }
-
-
-

@@ -78,14 +78,14 @@ build CMakeFiles/FoodTracker.dir/main.cpp.o: CXX_COMPILER__FoodTracker_Debug /Us
   OBJECT_DIR = CMakeFiles/FoodTracker.dir
   OBJECT_FILE_DIR = CMakeFiles/FoodTracker.dir
 
-build CMakeFiles/FoodTracker.dir/FoodLogger.cpp.o: CXX_COMPILER__FoodTracker_Debug /Users/ryan/FoodTracker/FoodLogger.cpp || cmake_object_order_depends_target_FoodTracker
-  DEP_FILE = CMakeFiles/FoodTracker.dir/FoodLogger.cpp.o.d
+build CMakeFiles/FoodTracker.dir/UserPrompts.cpp.o: CXX_COMPILER__FoodTracker_Debug /Users/ryan/FoodTracker/UserPrompts.cpp || cmake_object_order_depends_target_FoodTracker
+  DEP_FILE = CMakeFiles/FoodTracker.dir/UserPrompts.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++14
   OBJECT_DIR = CMakeFiles/FoodTracker.dir
   OBJECT_FILE_DIR = CMakeFiles/FoodTracker.dir
 
-build CMakeFiles/FoodTracker.dir/UserPrompts.cpp.o: CXX_COMPILER__FoodTracker_Debug /Users/ryan/FoodTracker/UserPrompts.cpp || cmake_object_order_depends_target_FoodTracker
-  DEP_FILE = CMakeFiles/FoodTracker.dir/UserPrompts.cpp.o.d
+build CMakeFiles/FoodTracker.dir/FoodTracker.cpp.o: CXX_COMPILER__FoodTracker_Debug /Users/ryan/FoodTracker/FoodTracker.cpp || cmake_object_order_depends_target_FoodTracker
+  DEP_FILE = CMakeFiles/FoodTracker.dir/FoodTracker.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++14
   OBJECT_DIR = CMakeFiles/FoodTracker.dir
   OBJECT_FILE_DIR = CMakeFiles/FoodTracker.dir
@@ -98,7 +98,7 @@ build CMakeFiles/FoodTracker.dir/UserPrompts.cpp.o: CXX_COMPILER__FoodTracker_De
 #############################################
 # Link the executable FoodTracker
 
-build FoodTracker: CXX_EXECUTABLE_LINKER__FoodTracker_Debug CMakeFiles/FoodTracker.dir/main.cpp.o CMakeFiles/FoodTracker.dir/FoodLogger.cpp.o CMakeFiles/FoodTracker.dir/UserPrompts.cpp.o
+build FoodTracker: CXX_EXECUTABLE_LINKER__FoodTracker_Debug CMakeFiles/FoodTracker.dir/main.cpp.o CMakeFiles/FoodTracker.dir/UserPrompts.cpp.o CMakeFiles/FoodTracker.dir/FoodTracker.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
   OBJECT_DIR = CMakeFiles/FoodTracker.dir
   POST_BUILD = :
