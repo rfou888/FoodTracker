@@ -12,4 +12,7 @@ void makeNewEntry();
 void validResponse(std::string& meal, double& calories, std::string& main_meal);
 void setUserInfo(std::string textFile);
 void viewExistingEntry();
+void setName(std::string& name);
+void validCalories(double& calories);
+void validMealOfTheDay(std::string& main_meal);
 #endif //FOODTRACKER_FOODTRACKER_H
