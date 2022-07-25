@@ -32,7 +32,7 @@ void makeNewEntry(){ //makes a new entry for the date asked
     double calories;
     userInfo.open(name.c_str(), std::fstream::app);
     userInfo << "------------------------------------------------" << std::endl;
-    std::cout << "Enter the date of the entry." << std::endl;
+    std::cout << "Enter the date of the entry. Please enter the date in the format month/day/year." << std::endl;
     std::cin >> date;
     userInfo << "Date: " << date << std::endl;
     userInfo.close();
